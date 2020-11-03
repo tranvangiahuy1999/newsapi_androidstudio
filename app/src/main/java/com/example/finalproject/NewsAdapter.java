@@ -1,28 +1,30 @@
 package com.example.finalproject;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-public class NewsAdapter extends BaseAdapter {
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
 
-    @Override
-    public int getCount() {
-        return 0;
-    }
+public class NewsAdapter extends RecyclerView.Adapter {
+    List<Articles> articlesArrayList;
 
+    @NonNull
     @Override
-    public Object getItem(int i) {
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public long getItemId(int i) {
-        return 0;
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+    public int getItemCount() {
+        return 0;
     }
 }
