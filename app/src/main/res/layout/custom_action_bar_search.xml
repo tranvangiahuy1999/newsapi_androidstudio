@@ -5,34 +5,48 @@
     android:gravity = "center_vertical"
     android:padding = "10dp"
     android:background="@color/primaryPink"
-    android:weightSum = "1">
+    android:weightSum = "10">
+    <Button
+        android:id="@+id/backBtnSearchBar"
+        android:layout_width = "26dp"
+        android:layout_height = "26dp"
+        android:scaleType="fitXY"
+        android:layout_marginLeft = "2dp"
+        android:layout_gravity="center"
+        android:background = "@drawable/icon_back" />
     <LinearLayout
         android:layout_width = "0dp"
         android:layout_height = "match_parent"
         android:gravity="center_vertical"
-        android:layout_weight = "0.6">
+        android:paddingLeft="8dp"
+        android:orientation="horizontal"
+        android:layout_weight = "9">
         <ImageView
             android:layout_width = "34dp"
             android:layout_height = "34dp"
             android:src = "@drawable/icon_app" />
-        <TextView
-            android:id = "@+id/name"
-            android:layout_width = "match_parent"
-            android:layout_height = "wrap_content"
-            android:layout_marginLeft = "10dp"
-            android:textSize = "20sp"
-            android:textColor = "@color/white"
-            android:textStyle = "bold"
-            android:text = "News App"/>
+        <EditText
+            android:id="@+id/editTextSearchBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:paddingLeft="4dp"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textColorHint="@color/readingTextColor"
+            android:hint="Searching for something?">
+
+        </EditText>
     </LinearLayout>
     <LinearLayout
         android:layout_width = "0dp"
         android:layout_height = "match_parent"
         android:layout_marginRight = "10dp"
-        android:layout_weight = "0.4"
+        android:layout_weight = "1"
         android:gravity ="end">
         <Button
-            android:id="@+id/searchBtn"
+            android:id="@+id/searchBtnSearchBar"
             android:layout_width = "28dp"
             android:layout_height = "28dp"
             android:scaleType="fitXY"

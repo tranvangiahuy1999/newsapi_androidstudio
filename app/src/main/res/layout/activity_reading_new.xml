@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/plashBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/reading_image_shape">
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/icon_back" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ProgressBar
+            android:id="@+id/readingProgressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_marginTop="70dp"/>
+
+        <ImageView
+            android:id="@+id/readingImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignBottom="@id/readingImage"
+            android:src="@drawable/bottom_shadow"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/readingImage"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/readingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:shadowColor="@color/black"
+                android:shadowRadius="8"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:text="This is Title"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/readingAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:text="Author"/>
+                <TextView
+                    android:id="@+id/readingNewsDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:textStyle="italic"
+                    android:textColor="@color/white"
+                    android:text="Date"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/readingSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/textColor"
+        android:text="Source"
+        >
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/readingContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:text="So this is content of the news"
+        android:layout_weight="11">
+
+    </TextView>
+
+
+
+</LinearLayout>

@@ -1,25 +1,32 @@
-package com.example.finalproject;
+package com.example.finalproject.model;
 
-public class Articles {
-    private String source_name, author, title, description, url, urlToImage,publishedAt, content;
+import com.google.gson.annotations.SerializedName;
 
-    public Articles(String source_name, String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
-        this.source_name = source_name;
-        this.author = author;
-        this.title = title;
-        this.description = description;
-        this.url = url;
-        this.urlToImage = urlToImage;
-        this.publishedAt = publishedAt;
-        this.content = content;
+import java.io.Serializable;
+
+public class Article implements Serializable {
+
+    @SerializedName("source")
+    private SourceModel source;
+    @SerializedName("author")
+    private String author;
+    @SerializedName("title")
+    private String title;
+    @SerializedName("description")
+    private String description;
+    @SerializedName("url")
+    private String url;
+    @SerializedName("urlToImage")
+    private String urlToImage;
+    @SerializedName("publishedAt")
+    private String publishedAt;
+
+    public SourceModel getSource() {
+        return source;
     }
 
-    public String getSource_name() {
-        return source_name;
-    }
-
-    public void setSource_name(String source_name) {
-        this.source_name = source_name;
+    public void setSource(SourceModel source) {
+        this.source = source;
     }
 
     public String getAuthor() {
@@ -68,13 +75,5 @@ public class Articles {
 
     public void setPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
     }
 }

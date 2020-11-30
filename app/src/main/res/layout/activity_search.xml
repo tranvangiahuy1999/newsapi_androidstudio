@@ -7,27 +7,28 @@
     android:weightSum="30">
 
     <LinearLayout
-        android:id="@+id/loadingNotify"
+        android:id="@+id/loadingProgress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
         android:background="@color/plashBackground"
-        android:visibility="visible">
+        android:visibility="gone"
+        >
         <ProgressBar
-            android:id="@+id/homeProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/primaryPink" />
 
-        <Button
-            android:id="@+id/reconnectBtn"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="20dp"
+        <TextView
+            android:id="@+id/resultsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:padding="5dp"
-            android:background="@drawable/icon_reload"
-            android:visibility="gone"/>
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="There are no results"/>
 
     </LinearLayout>
 
@@ -38,10 +39,10 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:padding="5dp"
-        android:text="Headlines" />
+        android:text="Results" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/searchScrRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="29"/>
@@ -53,7 +54,7 @@
         android:gravity="center"
         android:layout_weight="1">
         <Button
-            android:id="@+id/backwardBtnHomeSc"
+            android:id="@+id/backwardBtnSearchSc"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginLeft="5dp"
@@ -62,7 +63,7 @@
 
         </Button>
         <Button
-            android:id="@+id/backPageBtnHomeSc"
+            android:id="@+id/backPageBtnSearchSc"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginLeft="5dp"
@@ -72,7 +73,7 @@
         </Button>
 
         <TextView
-            android:id="@+id/currentPageTextHomeSc"
+            android:id="@+id/currentPageTextSearchSc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -83,7 +84,7 @@
             android:text="1" />
 
         <Button
-            android:id="@+id/frontPageBtnHomeSc"
+            android:id="@+id/frontPageBtnSearchSc"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginLeft="5dp"
@@ -92,7 +93,7 @@
 
         </Button>
         <Button
-            android:id="@+id/frontwardBtnHomeSc"
+            android:id="@+id/frontwardBtnSearchSc"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_marginLeft="5dp"

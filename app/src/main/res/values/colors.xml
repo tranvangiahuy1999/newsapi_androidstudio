@@ -9,5 +9,6 @@
     <color name="white">#FFFFFF</color>
     <color name="primaryPinkDark">#dd2f45</color>
     <color name="black">#000000</color>
-    <color name="textColor">#c7c7cc</color>
+    <color name="readingTextColor">#D3D3D3</color>
+    <color name="textColor">#808080</color>
 </resources>
